@@ -1,9 +1,16 @@
 package HelpClass;
 
 public class TreeNode {
-	int value;
-	TreeNode leftChild;
-	TreeNode rightChild;
+	public int value;
+	public TreeNode leftChild;
+	public TreeNode rightChild;
+	
+	public TreeNode(int value) {
+		super();
+		this.value = value;
+		this.leftChild = null;
+		this.rightChild = null;
+	}
 	public int getValue() {
 		return value;
 	}

@@ -8,23 +8,16 @@ import HelpClass.TreeNode;
 public class IdenticalTrees {
 
 	public static void main(String[] args) {
-		TreeNode tree1 = new TreeNode();
-		TreeNode tree2 = new TreeNode();
-		tree1.setValue(1);
-		tree2.setValue(1);
+		TreeNode tree1 = new TreeNode(1);
+		TreeNode tree2 = new TreeNode(1);
 		
-		tree1.setLeftChild(new TreeNode());
-		tree1.getLeftChild().setValue(2);
-		tree1.setRightChild(new TreeNode());
-		tree1.getRightChild().setValue(4);
+		tree1.setLeftChild(new TreeNode(2));
+		tree1.setRightChild(new TreeNode(4));
 		
-		tree1.getLeftChild().setLeftChild(new TreeNode());
-		tree1.getLeftChild().getLeftChild().setValue(3);
+		tree1.getLeftChild().setLeftChild(new TreeNode(3));
 		
-		tree2.setLeftChild(new TreeNode());
-		tree2.getLeftChild().setValue(2);
-		tree2.setRightChild(new TreeNode());
-		tree2.getRightChild().setValue(4);
+		tree2.setLeftChild(new TreeNode(2));
+		tree2.setRightChild(new TreeNode(4));
 		
 		if(compareTwoTrees(tree1, tree2) == 1){
 			System.out.println("identical tree");

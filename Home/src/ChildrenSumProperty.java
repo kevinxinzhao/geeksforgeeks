@@ -11,21 +11,15 @@ import HelpClass.TreeNode;
 public class ChildrenSumProperty {
 
 	public static void main(String[] args) {
-		TreeNode root = new TreeNode();
-		root.setValue(10);
+		TreeNode root = new TreeNode(10);
 		
-		root.setLeftChild(new TreeNode());
-		root.getLeftChild().setValue(8);
-		root.setRightChild(new TreeNode());
-		root.getRightChild().setValue(2);
+		root.setLeftChild(new TreeNode(8));
+		root.setRightChild(new TreeNode(2));
 		
-		root.getLeftChild().setLeftChild(new TreeNode());
-		root.getLeftChild().setRightChild(new TreeNode());
-		root.getLeftChild().getLeftChild().setValue(5);
-		root.getLeftChild().getRightChild().setValue(3);
+		root.getLeftChild().setLeftChild(new TreeNode(5));
+		root.getLeftChild().setRightChild(new TreeNode(3));
 		
-		root.getRightChild().setLeftChild(new TreeNode());
-		root.getRightChild().getLeftChild().setValue(2);
+		root.getRightChild().setLeftChild(new TreeNode(2));
 		
 		if(checkChildrenSumProperty(root) == 1){
 			System.out.print("Satisfy");
